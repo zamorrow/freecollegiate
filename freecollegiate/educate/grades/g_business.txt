@@ -1,0 +1,11 @@
+function entry(course, grade, prof_num){
+	if (document.indexOf(prof_num) === -1){
+		var Sheet = {lecture: numeric};
+		Sheet[] prof_num;
+		}
+	};
+ 	if (prof_num[].indexOf(course) === -1){
+		document.prof_num[].append({course: grade});
+	}
+	else {document.prof_num[].indexOf(course).numeric = grade}
+};

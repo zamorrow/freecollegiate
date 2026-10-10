@@ -1,0 +1,71 @@
+<html>
+<head>
+	<link src="scripts/math.js" type="text/javascript"></link>
+	<p value="new FileReader.addEventListener('load', (a) => {return this.src="lists/math_list.txt")}"></p>
+	<script>
+		var tick_math=0;
+		math_array.forEach(t) => ++tick_math;document.getElementById("table_math_all").push('<tr><td class="course_n" value="math_array[t].name" onclick="new Event(tick_math)"></td>
+				<td class="course_r" value="t.unit_rating"></td>
+			<td class="unit_n" value="t.unit_1.unit_name" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_1.unit_description" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="t.unit_2.unit_name" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_2.unit_description" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="t.unit_3.unit_name" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_3.unit_description" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="t.unit_4.unit_name" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_4.unit_description" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="t.unit_5.unit_name" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_5.unit_description" style="display:none;" on(tick_math)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td></tr>')
+		document.getElementById("submit_search").addEventListener("click", this.push('<table id="search_table">' +
+			if(math_array.search(document.getElementById('search_math_nav').value){
+				var table_set;
+				for (i=0; i<math_array.search(document.getElementById('search_math_nav').value()).length(); i++){
+					table_set += '<tr><td class="course_n sear" value="math_array.search(i).name;"  onclick="new Event('clicked_'+i);"></td>
+					<td class="course_r sear" value="math_array.search(i).rating;"></td>
+						<td class="unit_n sear" value="math_array.search[i].unit_1.unit_name;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="math_array.search[i].unit_1.unit_description;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'})"></td>
+						<td class="unit_n sear" value="math_array.search[i].unit_2.unit_name;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="math_array.search[i].unit_2.unit_description;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'})"></td>
+						<td class="unit_n sear" value="math_array.search[i].unit_3.unit_name;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="math_array.search[i].unit_3.unit_description;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'})"></td>
+						<td class="unit_n sear" value="math_array.search[i].unit_4.unit_name;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="math_array.search[i].unit_4.unit_description;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'})"></td>
+						<td class="unit_n sear" value="math_array.search[i].unit_5.unit_name;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="math_array.search[i].unit_5.unit_description;" style="display:none;" on('clicked_'+i)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'})"></td>
+					</tr>'
+				};
+				return table_set;
+			}; else {return "no data"};
+			+ '</table>'))
+	</script>
+</head>
+<body>
+<nav></nav>
+	<div id="title_math">Math Courses</div>
+	<div id="search_bar">
+		<input id="search_math_nav">input a course name to search</input>
+		<button type="submit" id="submit_search">submit</button>
+	</div>
+	<table id="table_math">
+		<tr>
+				<td class="course_n" value="math_array_top[0].name" onclick="new Event('top_math_0')"></td>
+				<td class="course_r" value="math_array_top[0].rating"></td>
+				<td class="unit_n" value="math_array_top[0].unit_1.unit_name" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[0].unit_1.unit_description" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[0].unit_2.unit_name" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[0].unit_2.unit_description" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[0].unit_3.unit_name" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[0].unit_3.unit_description" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[0].unit_4.unit_name" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[0].unit_4.unit_description" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[0].unit_5.unit_name" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[0].unit_5.unit_description" style="display:none;" ontop_math_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+		<tr>
+				<td class="course_n" value="math_array_top[1].name" onclick="new Event('top_math_1")></td>
+				<td class="course_r" value="math_array_top[1].rating"></td>
+				<td class="unit_n" value="math_array_top[1].unit_1.unit_name" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[1].unit_1.unit_description" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[1].unit_2.unit_name" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[1].unit_2.unit_description" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[1].unit_3.unit_name" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[1].unit_3.unit_description" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[1].unit_4.unit_name" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[1].unit_4.unit_description" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[1].unit_5.unit_name" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[1].unit_5.unit_description" style="display:none;" ontop_math_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+		<tr>
+				<td class="course_n" value="math_array_top[2].name" onclick="new Event('top_math_2')"></td>
+				<td class="course_r" value="math_array_top[2].rating"></td>
+				<td class="unit_n" value="math_array_top[2].unit_1.unit_name" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[2].unit_1.unit_description" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[2].unit_2.unit_name" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[2].unit_2.unit_description" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[2].unit_3.unit_name" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[2].unit_3.unit_description" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[2].unit_4.unit_name" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[2].unit_4.unit_description" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+				<td class="unit_n" value="math_array_top[2].unit_5.unit_name" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="math_array_top[2].unit_5.unit_description" style="display:none;" ontop_math_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+	<table/>
+	<button onclick="document.getElementById("table_math_all").toggleStyle(display)">all courses</button>
+	<table id="table_math_all" style="display:none;"></table>
+</body>
+</html>

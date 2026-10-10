@@ -1,0 +1,78 @@
+<html>
+<head>
+<script src="./index_java.js"></script>
+<script>
+	const fs = require("fs");
+	var list_select = document.getElementById("course_subject").value;
+	var data = "**"+ "/n" + document.getElementById("course_title").value + "* " + "*" + document.getElementById("unit_1_title").value + "* " + "*" + document.getElementById("desc_1").value + "* " + "*" + document.getElementById("unit_2_title").value + "* " + "*" + document.getElementById("desc_2").value + "* " + "*" + document.getElementById("unit_3_title").value + "* " + "*" + document.getElementById("desc_3").value + "* " + "*" + document.getElementById("unit_4_title").value + "* " + "*" + document.getElementById("desc_4").value + "* " + "*" + document.getElementById("unit_5_title").value + "* " + "*" + document.getElementById("desc_5").value + "* *5.00*/n";
+	document.getElementById("submit_button").addEventListener("click", function submission(data) => switch (list_select){
+	case business:
+		require "lists/business_course_list.txt";
+		fs.writeFile("business_course_list.txt", data);
+		break;
+	case business:
+		require "lists/business_course_list.txt";
+		fs.writeFile("business_course_list.txt", data);
+		break;
+	case biology:
+		require "lists/biology_course_list.txt";
+		fs.writeFile("biology_course_list.txt", data);
+		break;
+	case chemistry:
+		require "lists/chemistry_course_list.txt";
+		fs.writeFile("chemistry_course_list.txt", data);
+		break;
+	case physics:
+		require "lists/physics_course_list.txt";
+		fs.writeFile("physics_course_list.txt", data);
+		break;
+	case language:
+		require "lists/physics_course_list.txt";
+		fs.writeFile("physics_course_list.txt", data);
+		break;
+	case technology:
+		require "lists/technology_course_list.txt";
+		fs.writeFile("technology_course_list.txt", data);
+		break;
+	case literature:
+		require "lists/literature_course_list.txt";
+		fs.writeFile("literature_course_list.txt", data);
+		break;
+	}";
+</script>
+</head>
+<body>
+<h1>Enter your courses title.</h1>
+<input value="course_title"></input>
+<div id="main">
+	<form>
+	<input id="course_subject" type="text"></input>
+	<div id="course_li">
+		<button type="radio" class="course_button" value="business" onClick="document.getElementById("course_subject").innerHTML="business";">business</button>
+		<button type="radio" class="course_button" value="business" onClick="document.getElementById("course_subject").innerHTML="business";">business</button>
+		<button type="radio" class="course_button" value="biology" onClick="document.getElementById("course_subject").innerHTML="biology";">biology</button>
+		<button type="radio" class="course_button" value="chemistry" onClick="document.getElementById("course_subject").innerHTML="chemistry";">chemistry</button>
+		<button type="radio" class="course_button" value="physics" onClick="document.getElementById("course_subject").innerHTML="physics";">physics</button>
+		<button type="radio" class="course_button" value="language" onClick="document.getElementById("course_subject").innerHTML="language";">language</button>
+		<button type="radio" class="course_button" value="technology" onClick="document.getElementById("course_subject").innerHTML="technology";">technology</button>
+		<button type="radio" class="course_button" value="literature" onClick="document.getElementById("course_subject").innerHTML="literature";">literature</button>
+		</input>
+	</div>
+	<div id="course_units">
+		<div>
+		<p>1</p><input id="unit_1_title" value="Unit_1"></input>
+		<div class="unit_desc"><p></p><input value="unit_1 description" id="desc_1"></input></div>
+		<p>2</p><input id="unit_2_title" value="Unit_2"></input>
+		<div class="unit_desc"><p></p><input value="unit_2 description" id="desc_2"></input></div>
+		<p>3</p><input id="unit_3_title" value="Unit_3"></input>
+		<div class="unit_desc"><p></p><input value="unit_3 description" id="desc_3"></input></div>
+		<p>4</p><input id="unit_4_title" value="Unit_4"></input>
+		<div class="unit_desc"><p></p><input value="unit_4 description" id="desc_4"></input></div>
+		<p>5</p><input id="unit_5_title" value="Unit_5"></input>
+		<div class="unit_desc"><p></p><input value="unit_5 description" id="desc_5"></input></div>
+	</div>
+	<button id="submit_button" type="submit" onClick="alert("continue with this class?") window.prompt("<button onClick="continue;">yes</button><button onClick="break;">no</button>")">submit</button>
+	</form>
+</div>
+</body>
+</html>

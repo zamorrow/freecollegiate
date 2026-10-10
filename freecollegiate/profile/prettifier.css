@@ -1,0 +1,24 @@
+#nav_bar{};
+#profile_sum{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+};
+#profile_picture{
+	background-image: url("capture.png")
+};
+#your_name{
+	color: blue;
+};
+#profile_url{};
+#profile_body{};
+#class_section{};
+#classes_taken{};
+#classes_taken_list{};
+#classes_taking{};
+#classes_taking_list{};
+#side_panel{};
+#friends_sum{};
+#peers_button{};
+#latest_status{};
+#social_feed{};

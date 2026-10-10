@@ -1,0 +1,82 @@
+<html>
+<head>
+	<link src="./scripts/physics.js" type="text/javascript"></link>
+	<script>
+		var tick_physics=0;
+		physics_array.forEach(t) => ++tick_physics; document.getElementById("table_physics_all").push('<tr></td class="course_n" value="t.name" onclick="new Event(t + "physics")"></td>
+				<td class="course_r" value="t.rating"></td><td onclick="document.getElementById("e_in").value=(t.name + t.rating)">select</td>
+			<td class="unit_n" value="t.unit_1.unit_name" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_1.unit_description" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}">
+			<td class="unit_n" value="t.unit_2.unit_name" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_2.unit_description" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}">
+			<td class="unit_n" value="t.unit_3.unit_name" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_3.unit_description" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}">
+			<td class="unit_n" value="t.unit_4.unit_name" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_4.unit_description" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}">
+			<td class="unit_n" value="t.unit_5.unit_name" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="t.unit_5.unit_description" style="display:none;" on(t + "physics")="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></tr>');
+		document.getElementById("submit_search").addEventListener("click", this.push('<table id="search_table">' +
+			if(physics_array.search(document.getElementById("search_physics_nav").value)){
+				var count_e=0;
+				var table_set;
+				physics_array.search(document.getElementById("search_physics_nav")).forEach(i){
+					++count_e;
+					table_set += '<tr><td class="course_n sear" value="i.name" onclick="new Event('clicked_'+count_e);"></td>
+					<td class="course_r sear" value="i.rating;"></td><td onclick="document.getElementById("e_in").value=(i.name + i.rating)">select</td>
+						<td class="course_n sear" value="i.unit_1.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td><td class="unit_d sear" value="i.unit_1.unit_description;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td>
+						<td class="course_n sear" value="i.unit_1.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td><td class="unit_d sear" value="i.unit_2.unit_description;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td>
+						<td class="course_n sear" value="i.unit_1.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td><td class="unit_d sear" value="i.unit_3.unit_description;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td>
+						<td class="course_n sear" value="i.unit_1.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td><td class="unit_d sear" value="i.unit_4.unit_description;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td>
+						<td class="course_n sear" value="i.unit_1.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td><td class="unit_d sear" value="i.unit_5.unit_description;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default';}else{this.style['display']='none';}"></td>
+					</tr>'
+				}
+				return table_set;
+			}; else {return "no data"};
+			+ '</table>'));
+	</script>
+</head>
+<body>
+	<nav>
+		<a class="link" href="draft.html">Home</a>
+		<a class="link" href="profile/cclasses.html">Classes</a>
+		<a class="link" href="profile/f_list.html">Friends</a>
+		<a class="link" href="profile/profile_page.html">Account</a>
+	</nav>
+	<div id="enroll">
+		<p>enroll in:</p>
+		<div id="e_in"></div>
+		<button onclick="enroll(document.getElementById(e_in).value, User.Profile.get prof_num)">go ahead</button>
+	</div>
+	<div id="title_physics">Physics Courses</div>
+	<div id="search_bar">
+		<input id="search_physics_nav">input a course name to search</input>
+		<button type="submit" id="submit_search">submit</button>
+	</div>
+	<table id="table_physics">
+		<tr>
+			<td class="course_n" value="physics_array_top[0].name" onclick="new Event('top_physics_0')"></td>
+			<td class="course_r" value="physics_array_top[0].rating"></td><td onclick="document.getElementById("e_in").value=(physics_array_top[0].name + physics_array_top[0].rating)">select</td>
+			<td class="unit_n" value="physics_array_top[0].unit_1.unit_name" style="display:none;" ontop_physics_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[0].unit_1.unit_description" style="display:none;" ontop_physics_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[0].unit_2.unit_name" style="display:none;" ontop_physics_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[0].unit_2.unit_description" style="display:none;" ontop_physics_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[0].unit_3.unit_name" style="display:none;" ontop_physics_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[0].unit_3.unit_description" style="display:none;" ontop_physics_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[0].unit_4.unit_name" style="display:none;" ontop_physics_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[0].unit_4.unit_description" style="display:none;" ontop_physics_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[0].unit_5.unit_name" style="display:none;" ontop_physics_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[0].unit_5.unit_description" style="display:none;" ontop_physics_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+		<tr>
+			<td class="course_n" value="physics_array_top[1].name" onclick="new Event('top_physics_1')"></td>
+			<td class="course_r" value="physics_array_top[1].rating"></td><td onclick="document.getElementById("e_in").value=(physics_array_top[1].name + physics_array_top[1].rating)">select</td>
+			<td class="unit_n" value="physics_array_top[1].unit_1.unit_name" style="display:none;" ontop_physics_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[1].unit_1.unit_description" style="display:none;" ontop_physics_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[1].unit_2.unit_name" style="display:none;" ontop_physics_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[1].unit_2.unit_description" style="display:none;" ontop_physics_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[1].unit_3.unit_name" style="display:none;" ontop_physics_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[1].unit_3.unit_description" style="display:none;" ontop_physics_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[1].unit_4.unit_name" style="display:none;" ontop_physics_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[1].unit_4.unit_description" style="display:none;" ontop_physics_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[1].unit_5.unit_name" style="display:none;" ontop_physics_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[1].unit_5.unit_description" style="display:none;" ontop_physics_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+		<tr>
+			<td class="course_n" value="physics_array_top[2].name" onclick="new Event('top_physics_2')"></td>
+			<td class="course_r" value="physics_array_top[2].rating"></td><td onclick="document.getElementById("e_in").value=(physics_array_top[2].name + physics_array_top[2].rating)">select</td>
+			<td class="unit_n" value="physics_array_top[2].unit_1.unit_name" style="display:none;" ontop_physics_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[2].unit_1.unit_description" style="display:none;" ontop_physics_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[2].unit_2.unit_name" style="display:none;" ontop_physics_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[2].unit_2.unit_description" style="display:none;" ontop_physics_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[2].unit_3.unit_name" style="display:none;" ontop_physics_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[2].unit_3.unit_description" style="display:none;" ontop_physics_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[2].unit_4.unit_name" style="display:none;" ontop_physics_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[2].unit_4.unit_description" style="display:none;" ontop_physics_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="physics_array_top[2].unit_5.unit_name" style="display:none;" ontop_physics_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="physics_array_top[2].unit_5.unit_description" style="display:none;" ontop_physics_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+	</table>
+	<button onclick="document.getElementById("table_physics_all").toggleStyle(display)">all courses</button></div>
+	<table id="table_physics_all" style="display:none;"></table>
+</body>
+</html>

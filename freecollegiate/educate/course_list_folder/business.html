@@ -1,0 +1,76 @@
+<html>
+<head>
+	<link src="./scripts/business.js" type="text/javascript"></link>
+	<script>
+		var tick_business=0;
+		business_array.forEach(t) => ++tick_business;document.getElementById('cluster_sum').push('<tr><td class="course_n" value="t.name" onclick="new Event(tick_business)"></td>
+				<td class="course_r" value="t.rating"></td>
+			<td class="unit_n" value="t.unit_1.unit_name" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"</td><td class="unit_d" value="t.unit_1.unit_description;" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="t.unit_2.unit_name" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"</td><td class="unit_d" value="t.unit_2.unit_description;" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="t.unit_3.unit_name" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"</td><td class="unit_d" value="t.unit_3.unit_description;" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="t.unit_5.unit_name" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"</td><td class="unit_d" value="t.unit_5.unit_description;"style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td></tr>');
+			<td class="unit_n" value="t.unit_4.unit_name" style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"</td><td class="unit_d" value="t.unit_4.unit_description;"style="display:none;" on(tick_business)="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		document.getElementById("submit_search").addEventListener("click", this.push('table id="search_table">' +
+			if(business_array.search(document.getElementById("search_business_nav").value)){
+				var count_e=0;
+				var table_set;
+				business_array.search(document.getElementById("search_business_nav").value).forEach(i){
+					++count_e;
+					table_set += '<tr><td class="course_n sear" value="i.name;" onclick="new Event('clicked_'+count_e)''"></td>
+					<td class="course_r sear" value="i.rating;"></td>
+						<td class="course_n" value="i.unit_1.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="i.unit_1.unit_description;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+						<td class="course_n" value="i.unit_2.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="i.unit_2.unit_description;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+						<td class="course_n" value="i.unit_3.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="i.unit_3.unit_description;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+						<td class="course_n" value="i.unit_4.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="i.unit_4.unit_description;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+						<td class="course_n" value="i.unit_5.unit_name;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d sear" value="i.unit_5.unit_description;" style="display:none;" on('clicked_'+count_e)="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+					</tr>'
+				}
+				return table_set;
+			}; else {return "no data"};
+			+ '</table>'))
+	</script>
+</head>
+<body>
+	<nav>
+		<a class="link" href="draft.html">Home</a>
+		<a class="link" href="profile/cclasses.html">Classes</a>
+		<a class="link" href="profile/f_list.html">Friends</a>
+		<a class="link" href="profile/profile_page.html">Account</a>
+	</nav>
+	<div id="search_bar">
+		<input id="search_business_nav">input a course name to search</input>
+		<button type="submit" id="submit_search">submit</button>
+	</div>
+	<table id="table_business">
+		<tr>
+			<td class="course_n" value="business_array_top[0].name" onclick="new Event('top_business_0')"></td>
+			<td class="course_r" value="business_array_top[0].rating"></td>
+			<td class="unit_n" value="business_array_top[0].unit_1.unit_name" style="display:none;" ontop_business_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[0].unit_1.unit_description" style="display:none;" ontop_business_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[0].unit_2.unit_name" style="display:none;" ontop_business_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[0].unit_2.unit_description" style="display:none;" ontop_business_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[0].unit_3.unit_name" style="display:none;" ontop_business_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[0].unit_3.unit_description" style="display:none;" ontop_business_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[0].unit_4.unit_name" style="display:none;" ontop_business_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[0].unit_4.unit_description" style="display:none;" ontop_business_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[0].unit_5.unit_name" style="display:none;" ontop_business_0="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[0].unit_5.unit_description" style="display:none;" ontop_business_0="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+		<tr>
+			<td class="course_n" value="business_array_top[1].name" onclick="new Event('top_business_1')"></td>
+			<td class="course_r" value="business_array_top[1].rating"></td>
+			<td class="unit_n" value="business_array_top[1].unit_1.unit_name" style="display:none;" ontop_business_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[1].unit_1.unit_description" style="display:none;" ontop_business_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[1].unit_3.unit_name" style="display:none;" ontop_business_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[1].unit_3.unit_description" style="display:none;" ontop_business_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[1].unit_2.unit_name" style="display:none;" ontop_business_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[1].unit_2.unit_description" style="display:none;" ontop_business_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[1].unit_4.unit_name" style="display:none;" ontop_business_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[1].unit_4.unit_description" style="display:none;" ontop_business_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[1].unit_5.unit_name" style="display:none;" ontop_business_1="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[1].unit_5.unit_description" style="display:none;" ontop_business_1="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+		<tr>
+			<td class="course_n" value="business_array_top[2].name" onclick="new Event('top_business_2')"></td>
+			<td class="course_r" value="business_array_top[2].rating"></td>
+			<td class="unit_n" value="business_array_top[2].unit_1.unit_name" style="display:none;" ontop_business_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[2].unit_1.unit_description" style="display:none;" ontop_business_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[2].unit_2.unit_name" style="display:none;" ontop_business_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[2].unit_2.unit_description" style="display:none;" ontop_business_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[2].unit_3.unit_name" style="display:none;" ontop_business_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[2].unit_3.unit_description" style="display:none;" ontop_business_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[2].unit_4.unit_name" style="display:none;" ontop_business_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[2].unit_4.unit_description" style="display:none;" ontop_business_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+			<td class="unit_n" value="business_array_top[2].unit_5.unit_name" style="display:none;" ontop_business_2="if (this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td><td class="unit_d" value="business_array_top[2].unit_5.unit_description" style="display:none;" ontop_business_2="if(this.style['display']==='none'){this.style['display']='default'}else{this.style['display']='none'}"></td>
+		</tr>
+	</table>
+	<button onclick="if (document.getElementById('cluster_sum').style[display]==='default'){document.getElementById('cluster_sum').style['display']='none';}else{document.getElementById('cluster_sum').style['display']=default;};">hide directory</button></div>
+	<table id="cluster_sum"></table>
+</body>
+</html>

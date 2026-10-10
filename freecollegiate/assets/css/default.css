@@ -1,0 +1,10 @@
+
+body{
+  background-color: rgb(32,42,90);
+}
+.Learn,.Volunteer,.Socialize{
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  text-size: 100px;
+}

@@ -1,0 +1,54 @@
+<html>
+<head>
+<link href="prettifier.css" type="text/css" rel="stylesheet"/>
+<link href="./educate/index_java.js" type="text/js"/>
+<script>
+	const persona = User().profile;
+	document.getElementById("catch_us").style.display()=none;
+	document.getElementById("profile_picture").style.background=persona.profile_picture;
+	document.getElementById("your_name").innerHTML()=persona.first_name + persona.last_name;
+	document.getElementById("profile_url").innerHTML()="your URL for your page is " + persona.get profile_url();
+	document.getElementById("fav_subject").innerHTML()=persona.fav_sub;
+	document.getElementById("classes_taken_list").innerHTML()=persona.classes_taken;
+	document.getElementById("classes_taking_list").innerHTML()=persona.classes_taking;
+	document.getElementByIds("friends").innerHTML()=persona.friends();
+	document.getElementById("peers").innerHTML()=persona.peers();
+	document.getElementById("latest_status").innerHTML()=persona.lat_sta;
+	document.getElementById("social_feed").innerHTML()=persona.social_feed;
+</script>
+</head>
+<body>
+	<nav>
+		<a class="link" href="draft.html">Home</a>
+		<a class="link" href="profile/cclasses.html">Classes</a>
+		<a class="link" href="profile/f_list.html">Friends</a>
+		<a class="link" href="profile/profile_page.html">Account</a>
+	</nav>
+<div id="catch_us">edit profile
+	<div id="profile_picture_edit" onClick="alert("what is the url of the photograph?"); document.getElementById("profile_picture").url=getUserStr()"></div>
+	<a>Class</a><a>Feed</a><a>The Haps</a><a>Messages</a>
+</div>
+<div id="profile_sum">
+	<image id="profile_picture"></image>
+	</div><h1 id="your_name">yourname</h1>
+	<p id="profile_url"></p>
+	<p>favorite subject</p>
+	<h4 id="fav_subject"></h4>
+</div>
+<div id="profile_body">
+	<div id="class_section">
+		<div id="classes_taken">
+			<h3>Classes Taken</h3>
+			<div id="classes_taken_list">list of classes taken</div>
+		</div><div id="classes_taking">
+			<h3>Classes Taking</h3>
+			<div id="classes_taking_list">list of classes taking</div>
+		</div><div id="side_panel">
+			<div id="friends">Friends
+		</div><div id="peers_button">Peers</div>
+		<div id="latest_status">messages</div>
+	</div>
+</div>
+<div id="social_feed"></div>
+</body>
+</html>

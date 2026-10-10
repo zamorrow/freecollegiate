@@ -1,0 +1,112 @@
+<html>
+<head>
+<script link="running_classes_active.js">
+	nodes.forEach(node) => {
+		var j = new Element("div"), k = new Element("button");
+		j.id=node.slice(0,3)+node.slice(node.length()-_,node.length());
+		j.value="what: "node.slice(0,3)+"; when: " node.slice(node.length()-_,node.length())+";";
+		k.id=node.slice(0,3)+node.slice(node.length()-_,node.length())+"_button";
+		k.value="select to enroll"
+		document.getElementById("enrollable").appendChild(j).appendChild(k)};
+	var x,
+			b_1,b_2,b_3,
+			bi_1,bi_2,bi_3,
+			c_1,c_2,c_3,
+			la_1,la_2,la_3,
+			l_1,l_2,l_3;
+			m_1,m_2,m_3,
+			p_1,p_2,p_3,
+			t_1,t_2,t_3,
+			b_1 = import {business_list_top[0]} from 'course_list_folder/scripts/business.js'; b_2 = import {business_list_top[1]} from 'course_list_folder/scripts/business.js'; b_3 = import {business_list_top[2]} from 'course_list_folder/scripts/business.js';
+			bi_1 = import {biology_list_top[0]} from 'course_list_folder/scripts/biology.js'; bi_2 = import {biology_list_top[1]} from 'course_list_folder/scripts/biology.js'; bi_3 = import {biology_list_top[2]} from 'course_list_folder/scripts/biology.js';
+			c_1 = import {chemistry_list_top[0]} from 'course_list_folder/scripts/chemistry.js'; c_2 = import {chemistry_list_top[1]} from 'course_list_folder/scripts/chemistry.js'; c_3 = import {chemistry_list_top[2]} from 'course_list_folder/scripts/chemistry.js';
+			la_1 = import {language_list_top[0]} from 'course_list_folder/scripts/language.js'; la_2 = import {chemistry_list_top[1]} from 'course_list_folder/scripts/chemistry.js'; la_3 = import {chemistry_list_top[2]} from 'course_list_folder/scripts/chemistry.js';
+			l_1 = import {literature_list_top[0]} from 'course_list_folder/scripts/literature.js'; l_2 = import {literature_list_top[1]} from 'course_list_folder/scripts/literature.js'; l_3 = import {literature_list_top[2]} from 'course_list_folder/scripts/literature.js';
+			m_1 = import {math_list_top[0]} from 'course_list_folder/scripts/math.js'; m_2 = import {math_list_top[1]} from 'course_list_folder/scripts/math.js'; m_3 = import {math_list_top[2]} from 'course_list_folder/scripts/math.js';
+			p_1 = import {physics_list_top[0]} from 'course_list_folder/scripts/physics.js'; p_2 = import {physics_list_top[1]} from 'course_list_folder/scripts/physics.js'; p_3 = import {physics_list_top[2]} from 'course_list_folder/scripts/physics.js';
+			t_1 = import {technology_list_top[0]} from 'course_list_folder/scripts/technology.js'; t_2 = import {technology_list_top[1]} from 'course_list_folder/scripts/technology.js'; t_3 =  = import {technology_list_top[2]} from 'course_list_folder/scripts/technology.js';
+
+</script>
+</head>
+<body>
+	<nav>
+		<a class="link" href="draft.html">Home</a>
+		<a class="link" href="profile/cclasses.html">Classes</a>
+		<a class="link" href="profile/f_list.html">Friends</a>
+		<a class="link" href="profile/profile_page.html">Account</a>
+	</nav>
+<div id="business_cat">business</div>
+	<button onClick="x = document.getElementById("business_top");
+		if (x.style.display==="none"){x.style.display=default;}
+		else {x.style.display="none"};">courses
+	</button><a href="./course_list_folder/business.html">business home page</a>
+	<div id="business_top" style="display: none;">
+		<p value=(b_1.name + b_1.description) onHover="this.description=b_1.unit_1 + '/n' + b_1.unit_2 + '/n' + b_1.unit_3 + '/n' + b_1.unit_4 + '/n' + b_1.unit_5"><p/>
+		<pvalue=(b_2.name + b_2.description) onHover="this.description=b_2.unit_1 + '/n' + b_2.unit_2 + '/n' + b_2.unit_3 + '/n' + b_2.unit_4 + '/n' + b_2.unit_5"><p/>
+		<p value=(b_3.name + b_3.description) onHover="this.description=b_3.unit_1 + '/n' + b_3.unit_2 + '/n' + b_3.unit_3 + '/n' + b_3.unit_4 + '/n' + b_3.unit_5"><p/></div>
+<div id="math_cat">mathematics</div>
+	<button onClick="x=document.getElementById("math_list_top");
+		if (x.style.display==="none"){x.style.display=default;}
+		else x.style.display="none";">courses
+	</button><a href="./course_list_folder/math.html">mathematics home page</a>
+	<div id="math_top" style="display: none;">
+		<p value=(m_1.name + m_1.description) onHover="this.description=m_1.unit_1 + '/n' + m_1.unit_2 + '/n' + m_1.unit_3 + '/n' + m_1.unit_4 + '/n' + m_1.unit_5"><p/>
+		<pvalue=(m_2.name + m_2.description) onHover="this.description=m_2.unit_1 + '/n' + m_2.unit_2 + '/n' + m_2.unit_3 + '/n' + m_2.unit_4 + '/n' + m_2.unit_5"><p/>
+		<p value=(m_3.name + m_3.description) onHover="this.description=m_3.unit_1 + '/n' + m_3.unit_2 + '/n' + m_3.unit_3 + '/n' + m_3.unit_4 + '/n' + m_3.unit_5"><p/></div>
+<div id="biology_cat">biology</div>
+	<button onClick="x=document.getElementById("bio_nav");
+			if (x.style.display==="none"){x.style.display=default;}
+			else x.style.display="none";">courses
+	</button><a href="./course_list_folder/biology.html">biology home page</a>
+	<div id="bio_top" style="display: none;">
+		<p value=(bi_1.name + bi_1.description) onHover="this.description=bi_1.unit_1 + '/n' + bi_1.unit_2 + '/n' + bi_1.unit_3 + '/n' + bi_1.unit_4 + '/n' + bi_1.unit_5"><p/>
+		<pvalue=(bi_2.name + bi_2.description) onHover="this.description=bi_2.unit_1 + '/n' + bi_2.unit_2 + '/n' + bi_2.unit_3 + '/n' + bi_2.unit_4 + '/n' + bi_2.unit_5"><p/>
+		<p value=(bi_3.name + bi_3.description) onHover="this.description=bi_3.unit_1 + '/n' + bi_3.unit_2 + '/n' + bi_3.unit_3 + '/n' + bi_3.unit_4 + '/n' + bi_3.unit_5"><p/></div>
+<div id="chemistry_cat">chemistry</div>
+	<button onClick="x=document.getElementById("chem_top");
+			if (x.style.display==="none"){x.style.display=default;}
+			else x.style.display="none";">courses
+	</button><a href="./course_list_folder/chemistry.html">chemistry home page</a>
+	<div id="chem_top" style="display: none;">
+		<p value=(c_1.name + c_1.description) onHover="this.description=c_1.unit_1 + '/n' + c_1.unit_2 + '/n' + c_1.unit_3 + '/n' + c_1.unit_4 + '/n' + c_1.unit_5"><p/>
+		<pvalue=(c_2.name + c_2.description) onHover="this.description=c_2.unit_1 + '/n' + c_2.unit_2 + '/n' + c_2.unit_3 + '/n' + c_2.unit_4 + '/n' + c_2.unit_5"><p/>
+		<p value=(c_3.name + c_3.description) onHover="this.description=c_3.unit_1 + '/n' + c_3.unit_2 + '/n' + c_3.unit_3 + '/n' + c_3.unit_4 + '/n' + c_3.unit_5"><p/></div>
+<div id="physics_cat">physics</div>
+	<button onClick="x=document.getElementById("phys_top");
+			if (x.style.display==="none"){x.style.display=default;}
+			else x.style.display="none";">courses
+	</button><a href="./course_list_folder/physics.html">physics home page</a>
+	<div id="phys_top" style="display: none;">
+		<p value=(p_1.name + p_1.description) onHover="this.description=p_1.unit_1 + '/n' + p_1.unit_2 + '/n' + p_1.unit_3 + '/n' + p_1.unit_4 + '/n' + p_1.unit_5"><p/>
+		<pvalue=(p_2.name + p_2.description) onHover="this.description=p_2.unit_1 + '/n' + p_2.unit_2 + '/n' + p_2.unit_3 + '/n' + p_2.unit_4 + '/n' + p_2.unit_5"><p/>
+		<p value=(p_3.name + p_3.description) onHover="this.description=p_3.unit_1 + '/n' + p_3.unit_2 + '/n' + p_3.unit_3 + '/n' + p_3.unit_4 + '/n' + p_3.unit_5"><p/></div>
+<div id="language_cat">language</div>
+	<button onClick="x=document.getElementById("lang_top");
+			if (x.style.display==="none"){x.style.display=default;}
+			else x.style.display="none";">courses
+	</button><a href="./course_list_folder/language.html">language home page</a>
+	<div id="lang_top" style="display: none;">
+		<p value=(la_1.name + la_1.description) onHover="this.description=la_1.unit_1 + '/n' + la_1.unit_2 + '/n' + la_1.unit_3 + '/n' + la_1.unit_4 + '/n' + la_1.unit_5"><p/>
+		<pvalue=(la_2.name + la_2.description) onHover="this.description=la_2.unit_1 + '/n' + la_2.unit_2 + '/n' + la_2.unit_3 + '/n' + la_2.unit_4 + '/n' + la_2.unit_5"><p/>
+		<p value=(la_3.name + la_3.description) onHover="this.description=la_3.unit_1 + '/n' + la_3.unit_2 + '/n' + la_3.unit_3 + '/n' + la_3.unit_4 + '/n' + la_3.unit_5"><p/></div>
+<div id="tech_cat">tech</div>
+	<button onClick="x=document.getElementById("tech_top");
+			if (x.style.display==="none"){x.style.display=default;}
+			else x.style.display="none";">courses
+	</button><a href="./course_list_folder/technology.html">technology home page</a>
+	<div id="tech_top" style="display: none;">
+		<p value=(t_1.name + t_1.description) onHover="this.description=t_1.unit_1 + '/n' + t_1.unit_2 + '/n' + t_1.unit_3 + '/n' + t_1.unit_4 + '/n' + t_1.unit_5"><p/>
+		<pvalue=(t_2.name + t_2.description) onHover="this.description=t_2.unit_1 + '/n' + t_2.unit_2 + '/n' + t_2.unit_3 + '/n' + t_2.unit_4 + '/n' + t_2.unit_5"><p/>
+		<p value=(t_3.name + t_3.description) onHover="this.description=t_3.unit_1 + '/n' + t_3.unit_2 + '/n' + t_3.unit_3 + '/n' + t_3.unit_4 + '/n' + t_3.unit_5"><p/></div>
+<div id="literature_cat">literature</div>
+	<button onClick="x=document.getElementById("lit_top");
+			if (x.style.display==="none"){x.style.display=default;}
+			else x.style.display="none";">courses
+	</button><a href="./course_list_folder/literature.html">literature home page</a>
+	<div id="lit_top" style="display: none;">
+		<p value=(l_1.name + l_1.description) onHover="this.description=l_1.unit_1 + '/n' + l_1.unit_2 + '/n' + l_1.unit_3 + '/n' + l_1.unit_4 + '/n' + l_1.unit_5"><p/>
+		<pvalue=(l_2.name + l_2.description) onHover="this.description=l_2.unit_1 + '/n' + l_2.unit_2 + '/n' + l_2.unit_3 + '/n' + l_2.unit_4 + '/n' + l_2.unit_5"><p/>
+		<p value=(l_3.name + l_3.description) onHover="this.description=l_3.unit_1 + '/n' + l_3.unit_2 + '/n' + l_3.unit_3 + '/n' + l_3.unit_4 + '/n' + l_3.unit_5"><p/></div>
+	<div id="enrollable"></div>
+</body>
+</html>

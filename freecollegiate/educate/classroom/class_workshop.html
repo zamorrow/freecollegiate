@@ -1,0 +1,32 @@
+<html>
+<head>
+<script href="student.js" type="text/javascript">
+	var work = {slides_da, proc_da, whiteb_da, sandbox_da};
+	var slides_data, proc_data, whiteb_data, sandbox_data;
+</script>
+</head>
+<body>
+	<nav>
+		<a class="link" href="draft.html">Home</a>
+		<a class="link" href="profile/cclasses.html">Classes</a>
+		<a class="link" href="profile/f_list.html">Friends</a>
+		<a class="link" href="profile/profile_page.html">Account</a>
+	</nav>
+<h1>Classroom workshop</h1>
+<div style="display: flex">
+<div style="flex-direction: row;">
+	<h2 onClick="sandbox_close(); whiteb_close(); slides_close(); proc_open();">word processor</h2>
+	<h2 onClick="sandbox_close(); proc_close(); slides_close(); whiteb_open();">whiteboard simulator</h2>
+	<h2 onClick="sandbox_close(); proc_close(); whiteb_close(); slides_open();">slideshow creator</h2>
+	<h2 onClick="proc_close(); whiteb_close(); slides_close(); sandbox_open();">code playground</h2>
+</div>
+<div style="display: flex;">
+	<h4 onClick="navigator.getUserData("work").forEach.createElement("<div onClick="this.slides_data.true; this.slides_data.false;">"</div><div></div>;");">open file</h4>
+	<h4 onClick="navigator.getUserData("work").sandbox=sandbox_data;
+		navigator.getUserData("work").slides=slides_data; navigator.getUserData("work").whiteb=whiteb_data; navigator.getUserData("work").proc=proc_data;">save file</h4>
+	<h4 onClick="this.childNode.display=default">settings<table style="display:none;"><tr style="flex-direction:column"><td id=""></td><td></td><td></td></tr></table></h4>
+</div>
+</div>
+<canvas></canvas>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+	<script>
+		function event_created(int zip, Date event_time, String name, String details, int RSVP)={
+			let events = import "/event_list.txt";
+			let event_spot = events.indexOf(zip+1);
+			if (!RSVP){
+				RSVP = 0;
+			}
+			var event_composition = "/n" + zip + "/n" + "*" + e_name + "*" + e_time + "*" + details + "*" + need + "*" + 0;
+			createEvent("term"){events.splice(indexOf(event_composition), 1};
+			events.splice(event_spot-1, 0, event_composition;);
+			on event_time term;
+		};
+		document.getElementById("submit").onClick(function()=>{
+			if(!document.getElementById("event_zip").value){
+				alert("no zipcode for event");
+				break;
+			}
+			else if(typeof document.getElementById("event_zip").value != "number" && document.getElementById("event_zip").value.length() != 5){
+				alert("please use a zipcode");
+				break;
+			}
+			if(Object.prototype.toString.call(document.getElementById("event_time").value) != !isNaN(document.getElementById(document.getElementById("event_time").value){
+				alert("address the date again./appears to be an error");
+			}
+			if(!document.getElementById("event_name").value){
+				alert("no name for event");
+				break;
+			}
+			if(!document.getElementById("event_details").value){
+				alert("no details for event");
+				break;
+			}
+			event_created(document.getElementById("event_zip").value, document.getElementById("event_name").value, document.getElementById("event_details").value, document.getElementById("RSVP_need").value);
+		}
+	</script>
+</head>
+<body>
+	<p>event zip</p>
+	<input id="event_zip"></input>
+	<p>event name</p>
+	<input id="event_name"></input>
+	<p>event details</p>
+	<input id="event_details"></input>
+	<p>time and date /format(seconds/minutes/hours/day/month/year)</p>
+	<p>use 0 for a placeholder "the event is deleted from the event list at this exact time"</p>
+	<input id="event_time"></input>
+	<p>RSVP need</p>
+	<input id="RSVP_need"></input>
+	<button id="sumbit">submit</button>
+</body>
+</html>

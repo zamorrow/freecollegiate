@@ -1,0 +1,24 @@
+<html>
+<head>
+  <script>
+    document.getElementById("present").innerHTML()=
+      User.Classes.forEach(entry) => {
+        return "<h1>" + entry + "</h1>"
+      };
+    document.getElementById("past").innerHTML()=
+      User.Credits.forEach(entry) => {
+        return "<h1>" + entry.name + "/t" + entry.grade + "</h1>"
+      };
+  </script>
+</head>
+<body>
+  <nav>
+  <a class="link" href="draft.html">Home</a>
+  <a class="link" href="profile/cclasses.html">Classes</a>
+  <a class="link" href="profile/f_list.html">Friends</a>
+  <a class="link" href="profile/profile_page.html">Account</a>
+  </nav>
+  <div id="present"></div>
+  <div id="past"></div>
+</body>
+</html>
